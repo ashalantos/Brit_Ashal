@@ -18,6 +18,6 @@ jobs:
                 java-version: '17'
                 distribution: 'temurin'
           - name: Install dependencies
-            run: mvn install
+            run: mvn install -DskipTests
           - name: Build and run tests
             run: mvn clean test -DsuiteXmlFile=testng.xml
