@@ -17,8 +17,7 @@ jobs:
             with:
                 java-version: '17'
                 distribution: 'temurin'
-          # - name: Run the Maven verify phase
-            # run: mvn --batch-mode --update-snapshots verify
+          - name: Install dependencies
+            run: mvn install
           - name: Build and run tests
-            run: |
-              mvn clean test -DsuiteXmlFile=testng.xml
+            run: mvn clean test -DsuiteXmlFile=testng.xml
