@@ -1,0 +1,25 @@
+name: Maven TestNG Tests
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '30 04 * * 1-5'
+
+jobs:
+  regression-test:
+    runs-on: windows-latest
+   
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11' 
+
+    - name: Build and run tests
+      run: |
+        mvn clean test -DsuiteXmlFile=testng.xml
