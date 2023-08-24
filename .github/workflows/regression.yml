@@ -20,7 +20,7 @@ jobs:
           - name: Install dependencies
             run: mvn install -DskipTests
           - name: Build and run tests
-            run: mvn clean test -DsuiteXmlFile=testng.xml _Dmaven.test.failure.ignore=true
+            run: mvn clean test -DsuiteXmlFile=testng.xml -Dmaven.test.failure.ignore=true
           - name: Archive test results
             uses: actions/upload-artifact@v2
             with:
