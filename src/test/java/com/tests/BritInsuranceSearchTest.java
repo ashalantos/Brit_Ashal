@@ -111,7 +111,7 @@ public class BritInsuranceSearchTest extends BaseTest {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class='hero-static__title']/span")));
 		AssertJUnit.assertEquals(driver.findElement(By.xpath("//h1[@class='hero-static__title']/span")).getText(), "IFRS 17",
 				"Search results are displayed for IFRS 17");
-		System.out.println("2. Search for term “IFRS 17” in the search bar top right ");
+		System.out.println("2. Search for term 'IFRS 17' in the search bar top right ");
 
 		// Step 3: Assert on the three result titles
 		int expectedNumberOfResults = 3;
