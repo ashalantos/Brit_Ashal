@@ -1,4 +1,4 @@
-name: Maven TestNG Tests
+name: Abhi TestNG Tests
 
 on:
   push:
